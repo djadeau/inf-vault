@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vault-ui-ingress
+  namespace: vault
+  labels:
+    app: vault-ui
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  ingressClassName: public
+  rules:
+  - host: vault-ui.10.0.0.130.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vault-server-headless
+            port:
+              number: 8200
