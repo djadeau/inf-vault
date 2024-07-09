@@ -1,0 +1,20 @@
+.DS_Store
+# Common VCS dir
+.git/
+.gitignore
+.bzr/
+.bzignore
+.hg/
+.hgignore
+.svn/
+# Common backup files
+*.swp
+*.bak
+*.tmp
+*.orig
+*~
+# Various IDE
+.project
+.idea/
+*.tmproj
+.vscode/

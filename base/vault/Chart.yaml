@@ -1,0 +1,10 @@
+apiVersion: v3
+dependencies:
+- name: vault
+  repository: https://github.com/bitnami/charts/tree/main/bitnami/vault
+  version: 1.4.11
+name: vault
+description: A helm chart to deploy vault application
+type: application
+version: 0.0.0
+appVersion: "0.0.0"
