@@ -109,7 +109,7 @@ vault:
       debug: false
     ## @param server.replicaCount Number of Vault Server replicas to deploy
     ##
-    replicaCount: 1
+    replicaCount: 2
     ## @param server.podManagementPolicy Pod management policy
     ## Should be initialized one by one when building the replicaset for the first time
     ##
@@ -1295,7 +1295,7 @@ vault:
       debug: false
     ## @param injector.replicaCount Number of Vault Kubernetes Injector replicas to deploy
     ##
-    replicaCount: 1
+    replicaCount: 2
     ## @param injector.containerPorts.https Vault Kubernetes Injector metrics container port
     ##
     containerPorts:
