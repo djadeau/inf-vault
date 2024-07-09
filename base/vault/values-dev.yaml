@@ -145,7 +145,7 @@ vault:
     ## @param server.readinessProbe.successThreshold Success threshold for readinessProbe
     ##
     readinessProbe:
-      enabled: true
+      enabled: false
       initialDelaySeconds: 5
       periodSeconds: 10
       timeoutSeconds: 5
