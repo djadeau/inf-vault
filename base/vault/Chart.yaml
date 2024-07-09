@@ -1,7 +1,7 @@
 apiVersion: v3
 dependencies:
 - name: vault
-  repository: oci://registry-1.docker.io/bitnamicharts/vault
+  repository: https://charts.bitnami.com/bitnami
   version: 1.4.11
 name: vault
 description: A helm chart to deploy vault application
