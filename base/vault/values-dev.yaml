@@ -89,7 +89,7 @@ vault:
     image:
       registry: docker.io
       repository: bitnami/vault
-      tag: 1.17.1-debian-12-r3
+      tag: "1.19.5"
       digest: ""
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -291,7 +291,7 @@ vault:
     ## @param server.pdb.maxUnavailable Maximum number/percentage of pods that may be made unavailable. Defaults to `1` if both `server.pdb.minAvailable` and `server.pdb.maxUnavailable` are empty.
     ##
     pdb:
-      create: true
+      create: false
       minAvailable: ""
       maxUnavailable: ""
     ## Node server.affinity preset
@@ -770,7 +770,7 @@ vault:
     image:
       registry: docker.io
       repository: bitnami/vault-csi-provider
-      tag: 1.4.3-debian-12-r1
+      tag: "1.5.0"
       digest: ""
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -1275,7 +1275,7 @@ vault:
     image:
       registry: docker.io
       repository: bitnami/vault-k8s
-      tag: 1.4.2-debian-12-r1
+      tag: "1.6.2"
       digest: ""
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -1446,7 +1446,7 @@ vault:
     ## @param injector.pdb.maxUnavailable Maximum number/percentage of pods that may be made unavailable. Defaults to `1` if both `injector.pdb.minAvailable` and `injector.pdb.maxUnavailable` are empty.
     ##
     pdb:
-      create: true
+      create: false
       minAvailable: ""
       maxUnavailable: ""
     ## Autoscaling configuration
@@ -1458,11 +1458,11 @@ vault:
     ## @param injector.autoscaling.targetMemory Target Memory utilization percentage
     ##
     autoscaling:
-      enabled: false
-      minReplicas: ""
-      maxReplicas: ""
-      targetCPU: ""
-      targetMemory: ""
+      enabled: true
+      minReplicas: "1"
+      maxReplicas: "2"
+      targetCPU: "70"
+      targetMemory: "2Gi"
     ## Node injector.affinity preset
     ## ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
     ##
